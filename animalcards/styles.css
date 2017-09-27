@@ -1,0 +1,33 @@
+/* add your CSS here */
+.allDiv{
+	border:solid;
+	border-width: 1px;
+	border-color: #E0E0E0;
+	padding: 10px;
+}
+#outer{
+	width: 300px;
+	box-shadow: 10px 10px 2px #E0E0E0;
+	background-image: url('fish.jpg');
+}
+#inner{
+	width: 278px;
+	background-color: white;
+}
+#funfact {
+	font-style: italic;
+}
+img{
+	padding-bottom: 10px;
+}
+ul{
+	list-style-type: none;
+	padding: 0;
+}
+span {
+	font-weight: bold;
+}
+
+h3{
+	background-color:white;
+}
