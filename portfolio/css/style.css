@@ -8,17 +8,40 @@ hr{
 	width:64px;
 	height:64px;
 	margin-top:5px;
-}
+}	
 .big-mouse{
-	margin:auto;
+		margin:auto;
+		width:100%;
 }
-.bottom-mouse{
-	width:350px;
-	height:200px;
+.bottom-text{
+		text-align:center;
 }
 #header-text{
 	text-align: right;	
 }
 #featured-work{
 	padding:10px;
+}
+@media screen and (min-width:1300px){
+	.bottom-mouse{
+		width:350px;
+		height:200px;
+	}
+}
+@media screen and (min-width:1000px) and (max-width:1300px){
+	.bottom-mouse{
+		width:250px;
+		height:150px;
+	}
+}
+@media screen and (min-width: 767px) and (max-width: 1000px){
+	.bottom-mouse{
+		width:150px;
+		height:100px;
+	}
+}
+@media screen and (min-width:411px) and (max-width: 766px){
+	.bottom-mouse{
+		width:50%;
+	}
 }
