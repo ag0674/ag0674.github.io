@@ -1,50 +1,62 @@
-body{
-	margin: 100px 100px 100px 100px;
+body {
+	margin: 100px;
 }
-hr{
-	border-top:3px solid !important;
-}
-.nezid-logo{
+
+.nezid-logo {
 	width:64px;
 	height:64px;
 	margin-top:5px;
 }	
-.big-mouse{
+
+.big-mouse {
 		margin:auto;
 		width:100%;
 }
-.bottom-text{
+
+.bottom-text {
 	text-align:center;
 }
-#header-text{
+
+#header-text {
 	text-align: right;	
 }
-#featured-work{
+
+#header-bottom  {
+	border-bottom:1px solid black;
+	margin-bottom: 10px;
+}
+
+#featured-work {
 	padding:10px;
 }
-@media screen and (min-width:1300px){
-	.bottom-mouse{
+
+@media screen and (min-width:1300px) {
+	.bottom-mouse {
 		width:350px;
 		height:200px;
 	}
 }
-@media screen and (min-width:1000px) and (max-width:1300px){
-	.bottom-mouse{
+
+@media screen and (min-width:1000px) and (max-width:1300px) {
+	.bottom-mouse {
 		width:250px;
 		height:150px;
 	}
 }
-@media screen and (min-width: 767px) and (max-width: 1000px){
-	.bottom-mouse{
+
+@media screen and (min-width: 767px) and (max-width: 1000px) {
+	.bottom-mouse { 
 		width:150px;
 		height:100px;
 	}
 }
-@media screen and (max-width: 766px){
-	.bottom-mouse{
+
+@media screen and (max-width: 766px) {
+	.bottom-mouse {
 		width:50%;
 	}
-	.bottom-text{
+	
+	.bottom-text {
 		text-align:left;
 	}
 }
