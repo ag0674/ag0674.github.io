@@ -104,7 +104,7 @@
 			"title":"Animal Trading Cards",
 			"dates":"2017",
 			"description": "Udacity: Created an animal trading card using HTML and CSS.",
-			"images":["images/animalcard.png"]
+			"images":["images/animalcard.PNG"]
 		},
 	],
 	
