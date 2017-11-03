@@ -5,7 +5,7 @@
 	"biopic":"images/profilepic.jpg",
 	"skills":["HTML/CSS","Javascript","PHP", "SQL", "Databases"],
 	"contacts" : {
-		"mobile": "(915)253-3195",
+		"mobile": "N/A",
 		"email": "ag0674@att.com",
 		"github": "http://ag0674.github.io/portfolio/",
 		"twitter": "N/A",
