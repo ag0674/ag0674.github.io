@@ -448,12 +448,27 @@ var resizePizzas = function(size) {
   }
 
   // Iterates through pizza elements on the page and changes their widths
+  //created value randomPizzas. 
   function changePizzaSizes(size) {
-    for (var i = 0; i < document.querySelectorAll(".randomPizzaContainer").length; i++) {
-      var dx = determineDx(document.querySelectorAll(".randomPizzaContainer")[i], size);
-      var newwidth = (document.querySelectorAll(".randomPizzaContainer")[i].offsetWidth + dx) + 'px';
-      document.querySelectorAll(".randomPizzaContainer")[i].style.width = newwidth;
-    }
+	 switch (size){
+		 case "1":
+		 width=25;
+		 break;
+		 case "2":
+		 width=33.3;
+		 break;
+		 case "3":
+		 width=50;
+		 break;
+		 default:
+		 console.log("bug in chage Pizza Size switch");
+	 }
+	 var randomPizzas= document.querySelectorAll(".randomPizzaContainer");
+	 
+	 for (var i=0; i<randomPizzas.length; i++){
+		 randomPizzas[i].style.width = width +"%";
+	 }
+	 
   }
 
   changePizzaSizes(size);
@@ -497,26 +512,29 @@ function logAverageFrame(times) {   // times is the array of User Timing measure
 // https://www.igvita.com/slides/2012/devtools-tips-and-tricks/jank-demo.html
 
 // Moves the sliding background pizzas based on scroll position
-function updatePositions() {
-  frame++;
-  window.performance.mark("mark_start_frame");
 
-  var items = document.querySelectorAll('.mover');
-  for (var i = 0; i < items.length; i++) {
-    // document.body.scrollTop is no longer supported in Chrome.
-    var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-    var phase = Math.sin((scrollTop / 1250) + (i % 5));
-    items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
-  }
+function updatePositions(){
+	frame++;
+	window.performance.mark("mark_start_frame");
+	
+	var items=document.querySelectorAll('.mover');
+	var scrollTop= document.documentElement.scrollTop /1250; //pulled out equation from For Loop
+	var length= items.length;
+	
+	for (var i=0; i<length; i++){
+		phase = Math.sin(scrollTop + (i%5));
+		items[i].style.left=items[i].basicLeft+100 * phase + 'px';
+	}
 
-  // User Timing API to the rescue again. Seriously, it's worth learning.
-  // Super easy to create custom metrics.
+	//timing api
   window.performance.mark("mark_end_frame");
   window.performance.measure("measure_frame_duration", "mark_start_frame", "mark_end_frame");
+  
   if (frame % 10 === 0) {
     var timesToUpdatePosition = window.performance.getEntriesByName("measure_frame_duration");
     logAverageFrame(timesToUpdatePosition);
-  }
+  }	
+	
 }
 
 // runs updatePositions on scroll
