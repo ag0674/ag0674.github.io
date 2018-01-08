@@ -530,7 +530,7 @@ function updatePositions(){
 	for (var i=0;i<5;i++){
 		phase.push(Math.sin(scrollTop +(i))*100);
 	}
-	for (var i=0;i<length;i++){
+	for (i=0;i<length;i++){
 		items[i].style.left=items[i].basicLeft+phase[i%5]+'px';
 	}
 
