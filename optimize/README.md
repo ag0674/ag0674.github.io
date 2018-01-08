@@ -25,3 +25,4 @@ Using http://optimizilla.com/, I compressed the image by 95% which reduced the q
 Under the Cam's Pizzeria hyperlink, the user is taken to pizza.html. The javascript behind it has a lot of code and there were two parts that were slowing down the website.
   1) Pizza Sizer- under the function changePizzaSizes(size), I turned the for loop into a switch statement since there are only 3 sizes of pizza. Then based off the new width given by size, all random pizzas are changed to that size in the for loop.
   2) Pizza's moving in background- under the function updatePositions(), I took out all variables that can be declared outside of the for loop. A small math equation must still execute within due to the counter I am using.
+Also, 200 pizzas were being generated in the background and at most, you could only see 18, so I adjusted the numbers in the pizza slider listener.
